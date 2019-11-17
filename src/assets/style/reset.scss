@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+#layout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.content {
+    flex: 1;
+    height: 100%;
+}
+
+em,
+i,
+strong,
+b {
+    font-weight: normal;
+    font-style: normal;
+}

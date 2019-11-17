@@ -1,0 +1,216 @@
+@import 'assets/style/border.scss';
+@import 'assets/style/theme.scss';
+
+.home-nav {
+    height: .4rem;
+    @include border(#ccc, 0 0 1px 0);
+    display: flex;
+    align-items: center;
+
+    .hz {
+        span {
+            font-size: .15rem;
+            color: #666;
+            margin-left: .15rem;
+        }
+
+        i {
+            font-size: .1rem;
+            padding: 0 .05rem;
+            color: #666;
+        }
+    }
+
+    .word {
+        margin: 0 .2rem;
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            height: 100%;
+            padding: 0 .1rem;
+            line-height: .4rem;
+            font-size: .15rem;
+            color: #666;
+            font-weight: bold;
+            border-bottom: .02rem solid transparent;
+
+            &.active {
+                color: $theme_color;
+                border-bottom-color: $theme_color;
+            }
+        }
+
+
+    }
+
+    .search {
+        font-size: .15rem;
+        color: $theme_color;
+        margin-right: .15rem;
+    }
+}
+
+.hot {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+
+    ul {
+        padding: .15rem .15rem 0 .15rem;
+        box-sizing: border-box;
+
+        .hot-content {
+            display: flex;
+
+            .hot-content-left {
+                padding: 0 .15rem .15rem 0;
+
+                img {
+                    width: .64rem;
+                    height: .9rem;
+                }
+            }
+
+            .hot-content-right {
+                padding: 0 .15rem .15rem 0;
+                flex: 1;
+                position: relative;
+
+                h3 {
+                    font-size: .17rem;
+                    color: #333;
+                    margin-bottom: .08rem;
+                }
+
+                .audience {
+                    span {
+                        font-size: 0.13rem;
+                        color: #333;
+                    }
+
+                    em {
+                        color: #faaf00;
+                        font-size: .15rem;
+                        font-weight: bold;
+                    }
+                }
+
+                .starring {
+                    font-size: .13rem;
+                    color: #333;
+                    margin-top: .05rem;
+                    width: 2.05rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .showinfo {
+                    margin-top: .05rem;
+                    font-size: .13rem;
+                    color: #333;
+                }
+
+                .buy {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-.14rem) translateX(-.15rem);
+
+                    border: 0;
+                    border-radius: .04rem;
+
+                    width: .48rem;
+                    height: .28rem;
+                    color: #fff;
+                    font-size: .12rem;
+                }
+
+                .normal_button {
+                    background-color: $theme_color;
+                }
+
+                .pre_button {
+                    background-color: #3c9fe6;
+                }
+            }
+        }
+    }
+}
+
+
+
+.loading {
+    width: .8rem;
+    height: .4rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: auto;
+}
+
+.loading span {
+    display: inline-block;
+    margin: 0 .04rem;
+    width: .08rem;
+    height: 100%;
+    border-radius: .04rem;
+    background: lightgreen;
+    animation: load 1s ease infinite;
+    -webkit-animation: load 1s ease infinite;
+}
+
+@keyframes load {
+
+    0%,
+    100% {
+        height: .4rem;
+        background: lightgreen;
+    }
+
+    50% {
+        height: .7rem;
+        margin: -.15rem 0;
+        background: lightblue;
+    }
+}
+
+@-webkit-keyframes load {
+
+    0%,
+    100% {
+        height: .4rem;
+        background: lightgreen;
+    }
+
+    50% {
+        height: .7rem;
+        margin: -.15rem 0;
+        background: lightblue;
+    }
+}
+
+.loading span:nth-child(2) {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+
+.loading span:nth-child(4) {
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+
+.loading span:nth-child(5) {
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+}

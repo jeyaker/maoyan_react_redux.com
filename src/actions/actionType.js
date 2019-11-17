@@ -1,0 +1,4 @@
+export const CHANGE_BACK_FLAG = 'CHANGE_BACK_FLAG';
+export const GET_MOVIES = 'GET_MOVIES';
+export const GET_MORE_MOVIES = 'GET_MORE_MOVIES';
+export const CHANGE_LOADING_FLAG = 'CHANGE_LOADING_FLAG';
