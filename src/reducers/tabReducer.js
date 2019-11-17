@@ -1,7 +1,7 @@
 import { CHANGE_BACK_FLAG } from 'actions/actionType';
 
 const initState = {
-    noBack: ['/home'],
+    noBack: ['/home/hot', '/home/coming'],
     backFlag: true
 };
 
